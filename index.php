@@ -10,5 +10,4 @@ $charmeleon =  new charmeleon();
 
 $pikachu->printHp();
 $charmeleon->printHp();
-print_r('<pre>' . $pikachu . '</pre>');
 ?>
