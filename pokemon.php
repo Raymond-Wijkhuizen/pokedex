@@ -15,5 +15,9 @@ class Pokemon {
     public function __toString() {
         return json_encode($this);
     }
+    public function printHp()
+    {
+        echo '<h2>' .$this->name .' '. $this->health . 'HP'. '</h2>';
+    }
 
 }
