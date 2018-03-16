@@ -8,7 +8,7 @@ require 'charmeleon.php';
 $pikachu =  new pikachu();
 $charmeleon =  new charmeleon();
 
-$pikachu->printHp('seh');
+$pikachu->printHp();
 $charmeleon->printHp();
 print_r('<pre>' . $pikachu . '</pre>');
 ?>
