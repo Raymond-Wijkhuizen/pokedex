@@ -1,10 +1,13 @@
 <?php
 
 class Attacks {
+	public $name; 
+    public $damage;
 
-	 public function __construct($attacks)
+	 public function __construct($name, $damage)
     {
-        $this->attack = array("Electric Ring | 50", "Pika Punch | 20", "Headbutt | 10", "Flare | 30");
+        $this->name = $name;
+        $this->damage = $damage;
 
     }
     public function __toString() {

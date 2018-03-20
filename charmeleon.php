@@ -2,17 +2,19 @@
 
 class Charmeleon extends Pokemon {
 
-    public $name = 'Noelemrahc';
+    public $name;
     public $energyType = 'Fire';
     public $hitpoints = '60';
     public $health = '60';
-    public $attacks = array("Headbutt", "Flare");
+    public $attacks = [];
     public $weakness = 'water | 2';
     public $resistance = 'Lightning |10';
 
-    public function __construct()
+    public function __construct($name)
 {
-    parent::__construct($this->name, $this->energyType, $this->hitpoints, $this->health, $this->attacks, $this->weakness, $this->resistance);
+	$this->name = $name;
+	$attacks = [new Attacks("Headbutt", 10) , new Attacks("flare", 30)];
+    parent::__construct($this->name, $this->energyType, $this->hitpoints, $this->health, $attacks, $this->weakness, $this->resistance);
 }
 
 }
