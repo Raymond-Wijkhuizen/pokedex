@@ -7,8 +7,8 @@ class Pikachu extends Pokemon {
     public $hitpoints = '60';
     public $health = '60';
     public $attacks = array("Electric Ring", "Pika Punch");
-    public $weakness = '[Fire | 1.5]';
-    public $resistance = '[fighting | 20]';
+    public $weakness = 'Fire | 1.5';
+    public $resistance = 'fighting | 20';
 
     public function __construct()
 {
