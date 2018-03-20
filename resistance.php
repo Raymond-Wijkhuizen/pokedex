@@ -1,6 +1,8 @@
 <?php
 
 class Resistance {
+	public $energyType; 
+    public $worth;
 
 	 public function __construct($energyType, $worth)
     {
