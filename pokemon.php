@@ -27,5 +27,21 @@ class Pokemon {
     {
         echo '<h2>' .$this->name .' '. $this->health . 'HP'. '</h2>';
     }
+    public function attack($target, $att)
+    {
+        foreach ($this->attacks as $attack) {
+            if ($attack->name == $att) {
+                $damage = $attack->damage;
+                if ($this->energyType == $target->resistance->energyType) {
+                    $damage = $damage - $target->resistance->worth;
+                }
+                if ($this->energyType == $target->weakness->energyType) {
+                    $damage = $damage * $target->weakness->multiplier;
+                }
+                $newHealth = $target->health - $damage;
+                $target->health = $newHealth;
+            }
+        }
+    }
 
 }

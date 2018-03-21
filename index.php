@@ -13,21 +13,21 @@ $charmeleon = new charmeleon("charms");
 
 $pikachu->printHp();
 $charmeleon->printHp();
-var_dump($pikachu);
+
 
 
 ?>
-<!-- <p>Pikachu valt Charmeleon aan met een Electric Ring attack</p> -->
+<p>Pikachu valt Charmeleon aan met een Electric Ring attack</p>
 <br><br>
 <?php
-var_dump($charmeleon);
-die();
-
+$pikachu->attack($charmeleon , "Electric Ring");
+$charmeleon->printHp();
 
 ?>
 <p>Charmeleon valt Pikachu aan met een Flare attack</p>
 <?php
-
+$charmeleon->attack($pikachu , "Flare");
+$pikachu->printHp();
 
 
 ?>
